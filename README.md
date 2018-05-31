@@ -75,6 +75,10 @@ HiCDB({'/home/data/sample'},10000,'hg19','ref','custom_motiflocs.txt');
 #### 3. To detect differential CDBs
 ```matlab
 HiCDB({'/home/data/sample1','/home/data/sample2'},10000,'hg19','option','comparemap','ref','hg19');
+```  
+#### 4. To detect differential CDBs with replicates
+```matlab
+HiCDB({{'sample1_rep1/','sample1_rep2/'},{'sample2_rep1/','sample2_rep2/'}},'hg19',10000,'option','comparemap','ref','hg19');
 ```
 ### Output(s)
 **1.CDB.txt:**
