@@ -28,7 +28,7 @@ This will take the  intra-chromosome matrix ('chr1.matrix',...,'chr23.matrix') i
 ```shell
  nohup matlab -r "addpath(genpath('/home/fchen/HiCDB/'));fig=visHiCDB({'/home/fchen/HiCDB/h1_rep1/chr17.matrix'},{'/home/fchen/HiCDB/h1_rep1/CDB.txt'},40000,17,67100000,71100000);exit;" > mylog2.txt < /dev/null &
 ```
-You will get this output. The dot is CDB detected(light blue:not conserved CDB;dark blue:conserved CDB)  
+You will get this output. The dot is CDB detected(dark blue:consistently detected CDBs; light blue:other CDBs)  
 <div align=center><img width="500" height="500" src="https://github.com/ChenFengling/HiCDB/blob/master/images/17_67100000_71100000_HiCmap.png"/></div>
 
 #####  Get .bed file
