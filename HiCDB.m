@@ -836,9 +836,25 @@ function [im] = read2dense(hicfile,N,resolution)
 end
 
 function [imnew,gapidx]=KRnorm(im)     
- sumim=sum(im>0);
-cutoff = quantile(sumim(sumim>0),0.05);
-gapidx=find(sum(im)<cutoff);
+% sumim=sum(im>0);
+%cutoff = quantile(sumim(sumim>0),0.05);
+%gapidx=find(sum(im)<cutoff);
+  % 80% nearest region should have reads
+   pos=find(sum(im>0)==0);
+   pos2=find(sum(im>0)~=0);
+   im2=im;
+   im2(pos,:)=[];
+   im2(:,pos)=[];
+   n=size(im2,1)
+   A=ones(41,n);
+   for i=1:20
+   A(21+i,1:(n-i))=diag(im2,-i);
+   A(21-i,(i+1):n)=diag(im2,i);
+   end
+   gapidx=find(sum(A>0)<32);
+   gapidx=[pos,pos2(gapidx)];
+
+
 
   if(sum(sum(round(im)~=im))==0)
   disp('Your input matrix is raw matrix, perform KR normalization');
