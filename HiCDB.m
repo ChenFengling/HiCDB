@@ -845,13 +845,13 @@ function [imnew,gapidx]=KRnorm(im)
    im2=im;
    im2(pos,:)=[];
    im2(:,pos)=[];
-   n=size(im2,1)
+   n=size(im2,1);
    A=ones(41,n);
    for i=1:20
    A(21+i,1:(n-i))=diag(im2,-i);
    A(21-i,(i+1):n)=diag(im2,i);
    end
-   gapidx=find(sum(A>0)<32);
+   gapidx=find(sum(A>0)<35);
    gapidx=[pos,pos2(gapidx)];
 
 
