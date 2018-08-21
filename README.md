@@ -21,12 +21,12 @@ tar -zxvf testdata.tar.gz
 To run HiCDB or visHiCDB in command line with nohup, simply add the HiCDB software path and use the code as in MATLAB environment.  
 ##### Run HiCDB to get the CDBs.
 ```shell
-nohup matlab -r "addpath(genpath('HiCDB_PATH/HiCDB/'));HiCDB({'FULL_PATH_TO_DATA_FOLDER/h1_rep1/'},40000,'hg19','ref','hg19');exit;" > mylog.txt < /dev/null &
+nohup matlab -r "addpath(genpath('HiCDB_PATH/'));HiCDB({'FULL_PATH_TO_DATA_FOLDER/h1_rep1/'},40000,'hg19','ref','hg19');exit;" > mylog.txt < /dev/null &
 ```
 This will take the  intra-chromosome matrix ('chr1.matrix',...,'chr23.matrix') in 'FULL_PATH_TO_DATA_FOLDER/h1_rep1/' as input and set the resolution as 40000,chrsizes as 'hg19', the CTCF motif ref as 'hg19' and output the contact domain boundaries. "</dev/null &" shoud be added to avoid MATLAB entering an infinite loop.  
 ##### Run visHiCDB to display the region chr17:67100000-71100000.
 ```shell
- nohup matlab -r "addpath(genpath('HiCDB_PATH/HiCDB/'));fig=visHiCDB({'FULL_PATH_TO_DATA_FOLDER/h1_rep1/chr17.matrix'},{'FULL_PATH_TO_DATA_FOLDER/h1_rep1/CDB.txt'},40000,17,67100000,71100000);exit;" > mylog2.txt < /dev/null &
+ nohup matlab -r "addpath(genpath('HiCDB_PATH/'));fig=visHiCDB({'FULL_PATH_TO_DATA_FOLDER/h1_rep1/chr17.matrix'},{'FULL_PATH_TO_DATA_FOLDER/h1_rep1/CDB.txt'},40000,17,67100000,71100000);exit;" > mylog2.txt < /dev/null &
 ```
 You will get this output. The dot is CDB detected(dark blue:consistently detected CDBs; light blue:other CDBs)  
 <div align=center><img width="500" height="500" src="https://github.com/ChenFengling/HiCDB/blob/master/images/17_67100000_71100000_HiCmap.png"/></div>
