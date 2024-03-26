@@ -1,5 +1,5 @@
-# HiCDB – user guide
-<div align=center><div style="float: left;"><img width="30" height="30" src="https://github.com/ChenFengling/HiCDB/blob/master/images/HiCDBlogo.png"/></div>
+# <div style="float: left;"><img width="70" height="70" src="https://github.com/ChenFengling/HiCDB/blob/master/images/HiCDBlogo.png"/></div>
+HiCDB – user guide
 Authors: Fengling Chen，Guipeng Li
 ## Overview
 &emsp;&emsp;HiCDB is an open-source MATLAB/GNU OCTAVE code that detects the contact domain boundaries (CDBs) from Hi-C contact matrix. HiCDB.m takes raw or normalized contact matrix and outputs conservation annotated CDBs (option: singlemap) or differential CDBs (option: comparemap). visHiCDB.m takes raw or normalized contact matrix and HiCDB results and outputs visualization of CDBs on single Hi-C map (option: singlemap) or differential CDBs on two Hi-C maps (option: comparemap). You could run HiCDB and visHiCDB in MATLAB enviroment or in command line.  
