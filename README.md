@@ -1,4 +1,4 @@
-<h1><img src="https://github.com/ChenFengling/HiCDB/raw/master/images/HiCDBlogo.png" alt="HiCDB Logo" style="float:left; margin-right:10px;" width="20" height="20"/>HiCDB – user guide</h1>
+<h1><img src="https://github.com/ChenFengling/HiCDB/raw/master/images/HiCDBlogo2.png" alt="HiCDB Logo" style="float:left; margin-right:10px;" width="30" height="30"/>HiCDB – user guide</h1>
 
 Authors: Fengling Chen，Guipeng Li
 ## Overview
